@@ -2,6 +2,7 @@
 # checkout - https://www.hackerrank.com/challenges/a-chessboard-game-1/forum/comments/208350
 # checkout jawad_cs's comment in discussions
 # checkout peterekras's comment in discussions 
+# here, the key concept is if a player is surrounded by other's victory then he loses
 
 x = [[]]
 def checkAllMoves(x, y):
@@ -20,7 +21,7 @@ for pos in poses:
     x, y = pos[0], pos[1]
     store = [[-1 for x in range(15)] for y in range(15)]
     outcome = checkAllMoves(x, y)
-    if outcome == 0:
-        print("Second")
-    else:
+    if outcome == 1:
         print("First")
+    else:
+        print("Second")
