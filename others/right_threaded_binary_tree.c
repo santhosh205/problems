@@ -86,10 +86,10 @@ int main() {
     printf("Total no. of entries? ");
     int count, i, num;
     scanf("%d", &count);
-    node *tree;
     printf("Enter the numbers (with a space between them):\n");
     // Check the algorithm with 5, 4, 9, 3, 1, 7, 8, 11, 12
     // Test the algorithm with 11, 6, 8, 19, 4, 10, 5, 17, 43, 49, 31
+    node *tree;
     for(i=0; i<count; i++) {
         scanf("%d", &num);
         if(i == 0) {
