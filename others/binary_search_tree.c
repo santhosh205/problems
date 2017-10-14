@@ -100,13 +100,14 @@ node *deleteNode(node *tree, int x) {
              p = tree->left;
              free(tree);
              return p;
+        } else {
+            p = tree->right;
+            while (p->left != NULL) {
+                p = p->left;
+            }
+            p.left = tree.left;
+            tree = tree.right;
         }
-        p = tree->right;
-        while (p->left != NULL) {
-            p = p->left;
-        }
-        tree->val = p->val;
-        tree->right = deleteNode(tree->right, p->val);
     }
     return tree;
 }
