@@ -105,8 +105,8 @@ node *deleteNode(node *tree, int x) {
             while (p->left != NULL) {
                 p = p->left;
             }
-            p.left = tree.left;
-            tree = tree.right;
+            p->left = tree->left;
+            tree = tree->right;
         }
     }
     return tree;
